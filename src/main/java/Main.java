@@ -1,3 +1,4 @@
+import dz9.Poster;
 import org.example.dz2.SqrtService;
 
 import java.util.Arrays;
@@ -7,13 +8,12 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        int[] arr = new int[5];
-        arr[2] = 11;
-        System.out.println(Arrays.toString(arr));
+        Poster poster = new Poster();
 
-        int[] arr1 = {
-                1, 2, 3, 4, 5
-        };
-        System.out.println(Arrays.toString(arr1));
+        poster.title = "Матрица ";
+        poster.releaseYear = 1999;
+        poster.imgUrl = "???";
+
+
     }
 }
