@@ -1,3 +1,4 @@
+import dz13.Book;
 import dz9.Poster;
 import org.example.dz2.SqrtService;
 
@@ -8,12 +9,9 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Poster poster = new Poster();
-
-        poster.title = "Матрица ";
-        poster.releaseYear = 1999;
-        poster.imgUrl = "???";
-
+        Book book = new Book();
+        book.setPrice(12_000);
+        System.out.println(book.isTooExpensive());
 
     }
 }
