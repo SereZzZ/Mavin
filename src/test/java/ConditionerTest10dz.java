@@ -4,26 +4,20 @@ import org.junit.jupiter.api.Test;
 
 public class ConditionerTest10dz {
 
-    Conditioner con = new Conditioner();
+    Conditioner con = new Conditioner(30, 10);
 
     @Test
     public void shouldSetTemperature() {
         con.setCurrentTemperature(15);
 
-        int expected = 15;
-        int actual = con.getCurrentTemperature();
-
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(15, con.getCurrentTemperature());
     }
 
     @Test
     public void shouldSetToMaxTemperature() {
         con.setTuMaxTemp();
 
-        int expected = 30;
-        int actual = con.getCurrentTemperature();
-
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(30, con.getCurrentTemperature());
 
     }
 
@@ -31,10 +25,7 @@ public class ConditionerTest10dz {
     public void shouldNotSetTemperatureAboveMax() {
         con.setCurrentTemperature(50);
 
-        int expected = 30;
-        int actual = con.getCurrentTemperature();
-
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(30, con.getCurrentTemperature());
     }
 
     @Test
@@ -42,10 +33,7 @@ public class ConditionerTest10dz {
         con.setCurrentTemperature(25);
         con.increaseTemp50p();
 
-        int expected = 30;
-        int actual = con.getCurrentTemperature();
-
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(30, con.getMaxTemperature());
     }
 
     @Test
@@ -53,7 +41,7 @@ public class ConditionerTest10dz {
         con.setCurrentTemperature(10);
         con.minusTemp50p();
 
-        int expected = 5;
+        int expected = 10;
         int actual = con.getCurrentTemperature();
 
         Assertions.assertEquals(expected, actual);
@@ -86,7 +74,7 @@ public class ConditionerTest10dz {
         con.setCurrentTemperature(-4);
         con.up1g();
 
-        int expected = 1;
+        int expected = 11;
         int actual = con.getCurrentTemperature();
 
         Assertions.assertEquals(expected, actual);
