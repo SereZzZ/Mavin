@@ -42,8 +42,17 @@ public class Conditioner {
         setCurrentTemperature(target);
     }
 
+    public void gradusTWO(){
+        int twoGradus = currentTemperature + 2;
+        setCurrentTemperature(twoGradus);
+    }
+
     public void setTuMaxTemp() {
         currentTemperature = maxTemperature;
+    }
+
+    public void setTuMinTemp() {
+        currentTemperature = minTemperature;
     }
 
     public void up1g(){

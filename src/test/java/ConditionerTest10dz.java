@@ -41,10 +41,7 @@ public class ConditionerTest10dz {
         con.setCurrentTemperature(10);
         con.minusTemp50p();
 
-        int expected = 10;
-        int actual = con.getCurrentTemperature();
-
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(10, con.getCurrentTemperature());
     }
 
     @Test
@@ -80,4 +77,18 @@ public class ConditionerTest10dz {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    public void upTwoGradus(){
+        con.setCurrentTemperature(20);
+        con.gradusTWO();
+
+        Assertions.assertEquals(22, con.getCurrentTemperature());
+    }
+
+    @Test
+    public void minTemp() {
+        con.setTuMinTemp();
+
+        Assertions.assertEquals(10, con.getMinTemperature());
+    }
 }

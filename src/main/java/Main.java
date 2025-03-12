@@ -1,4 +1,5 @@
 import dz13.Book;
+import dz13.Product;
 import dz9.Poster;
 import org.example.dz2.SqrtService;
 
@@ -9,9 +10,18 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        Book book = new Book();
-        book.setPrice(12_000);
+        Product book = new Book(
+                1,
+                "Гоша",
+                10_001,
+                "Гоша рубчинский",
+                120,
+                1999
+
+        );
+        book.setPrice(book.getPrice());
         System.out.println(book.isTooExpensive());
+        book.use();
 
     }
 }
